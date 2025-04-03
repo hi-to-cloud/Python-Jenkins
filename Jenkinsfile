@@ -9,7 +9,7 @@ pipeline {
                     sh '''
                         if [ -d "shared-lib" ]; then rm -rf shared-lib; fi
                         git clone https://github.com/hi-to-cloud/Python-Jenkins.git shared-lib
-                        cd shared-lib && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+                        cd shared-lib && python3 -m venv venv && . venv/bin/activate && pip install -r requirements.txt
                     '''
                 }
         }
