@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Python Shared Library') {
             steps {
-                sh 'git clone https://github.com/my-org/python-jenkins-shared-lib.git shared-lib'
+                sh 'git clone https://github.com/hi-to-cloud/Python-Jenkins.git shared-lib'
                 sh 'cd shared-lib && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt'
             }
         }
